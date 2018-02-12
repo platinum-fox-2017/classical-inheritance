@@ -67,9 +67,6 @@ class Chicken extends Animal{
 
 
 //Driver code
-
-let superpower = new SuperPower(true, false);
-
 let animal = new Animal(2, true, true, true);
 console.log(animal);
 
