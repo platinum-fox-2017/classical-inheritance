@@ -15,6 +15,7 @@ class Frog extends Animal {
     constructor(species) {
         super(species);
         this.num_legs = 2;
+        this.superPower = new SuperPower();
     }
 
     is_warm_blooded() {
@@ -26,6 +27,7 @@ class Bat extends Animal {
     constructor(species) {
         super(species);
         this.num_legs = 2;
+        this.superPower = new SuperPower();
     }
 
     is_warm_blooded() {
@@ -37,6 +39,7 @@ class Chimpanzee extends Animal {
     constructor(species) {
         super(species);
         this.num_legs = 2;
+        this.superPower = new SuperPower();
     }
 
     is_warm_blooded() {
@@ -48,6 +51,7 @@ class Fox extends Animal {
     constructor(species) {
         super(species);
         this.num_legs = 4;
+        this.superPower = new SuperPower();
     }
 
     is_warm_blooded() {
@@ -59,6 +63,7 @@ class Chicken extends Animal {
     constructor(species) {
         super(species);
         this.num_legs = 2;
+        this.superPower = new SuperPower();
     }
 
     is_warm_blooded() {
@@ -66,18 +71,36 @@ class Chicken extends Animal {
     }
 }
 
-var animal = new Animal('mamal', 4);
+class SuperPower {
+    use_laser_vision() {
+        return "I have laser vision !";
+    }
+
+    be_invisible() {
+        return "U can't see me !";
+    }
+
+    liveInTwoPlace() {
+        return "I can live in water and land !"
+    }
+}
+
+var animal = new Animal('Insect', 1000);
 animal.is_warm_blooded();
 console.log(animal);
-
-var fox = new Fox('Mamal');
-fox.is_warm_blooded();
-console.log(fox);
 
 var frog = new Frog('Amphibi');
 frog.is_warm_blooded();
 console.log(frog);
+console.log(frog.superPower.liveInTwoPlace());
 
 var chicken = new Chicken('Poultry');
 chicken.is_warm_blooded();
 console.log(chicken);
+console.log(chicken.superPower.be_invisible());
+
+
+var fox = new Fox('Mamal');
+fox.is_warm_blooded();
+console.log(fox);
+console.log(fox.superPower.be_invisible());
