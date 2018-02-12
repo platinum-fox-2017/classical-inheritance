@@ -1,9 +1,11 @@
 "use strict"
+let SuperPower = require('./animals_superPower')
 class Animal {
     constructor(name) {
         this.name = name || 'animal'
         this.num_legs = 2
         this.is_warm_blooded = true
+        this.superpower = new SuperPower(this.name)
     }
     numLegs() {
         console.log(`${this.name} memiliki ${this.num_legs} kaki`);
@@ -33,6 +35,7 @@ class Fox extends Animal {
         super('Fox')
         super.num_legs = 4
         super.is_warm_blooded = false
+        super.superpower
     }
 }
 class Chicken extends Animal {
@@ -48,3 +51,4 @@ let fox = new Fox()
 let chicken = new Chicken()
 fox.numLegs()
 fox.isWarmBlooded()
+fox.superpower.use_laser_vision()
