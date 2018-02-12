@@ -69,6 +69,11 @@ class Cat extends Animal{
   }
 }
 
+
+//1. masukkan keterangan dari setiap binatang: jumlah kaki, darah panas/dingin, cara berkembang biak,
+//   kekuatan lompatan super, kecepatan super, dan kekuatan super
+//2. akan ditampilkan keterangan sesuai pembagian yang telah dituliskan
+
 let rabbit = new Rabbit(2,true,'Vivipar',true,true,false);
 let ant = new Ant(6,true,'Ovipar',false,true,true);
 let bird = new Bird(2,true,'Ovipar',false,true,false);
