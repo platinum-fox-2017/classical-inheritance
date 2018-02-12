@@ -13,8 +13,10 @@ class Beo extends Burung{
     super(legs,warmBlood,herbivore,layEggs)
     this._name = name
     this._can_fly = canFly
+    this.superpower = new SuperPower(this._name)
   }
 }
 
 var beo = new Beo('beo',2,true,false,true,true)
 console.log(beo);
+console.log(beo.superpower.wing_blade())

@@ -13,8 +13,10 @@ class Monyet extends Mamalia{
     super(legs,warmBlood,herbivore,layEggs)
     this._name = name
     this._climb_tree = climbtree
+    this.superpower = new SuperPower(this._name)
   }
 }
 
 var orangUtan = new Monyet('orang utan',2,true,false,false,true)
 console.log(orangUtan);
+console.log(orangUtan.superpower.almighty_punch());

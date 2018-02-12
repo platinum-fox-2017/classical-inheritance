@@ -13,8 +13,10 @@ class Pirahna extends Ikan {
     super(legs,warmBlood,herbivore,layEggs)
     this._name = name
     this._teeth = teeth
+    this.superpower = new SuperPower(this._name)
   }
 }
 
-var pirahna = new Pirahna('piranha',0,false,false,true,true)
-console.log(pirahna);
+var piranha = new Pirahna('piranha',0,false,false,true,true)
+console.log(piranha);
+console.log(piranha.superpower.stealth_bite());

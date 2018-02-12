@@ -13,8 +13,10 @@ class Ular extends Reptil{
     super(legs,warmBlood,herbivore,layEggs)
     this._name = name
     this._poisonous = poisonous
+    this.superpower = new SuperPower(this._name)
   }
 }
 
 var kobra = new Ular('kobra',0,false,false,true,true)
 console.log(kobra);
+console.log(kobra.superpower.ultimate_poison());
