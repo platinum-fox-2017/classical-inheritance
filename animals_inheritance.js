@@ -23,9 +23,8 @@ class SuperPower{
     }
 }
 
-class Animal extends SuperPower{
-    constructor(num_legs, is_warm_blooded, use_laser, invisible){
-        super(use_laser, invisible);
+class Animal{
+    constructor(num_legs, is_warm_blooded){
         this.num_legs = num_legs;
         this.is_warm_blooded = is_warm_blooded;
     }
@@ -33,58 +32,64 @@ class Animal extends SuperPower{
 
 class Frog extends Animal{
     constructor(num_legs, is_warm_blooded, use_laser, invisible){
-        super(num_legs, is_warm_blooded, use_laser, invisible);
+        super(num_legs, is_warm_blooded);
+        this.superpower = new SuperPower(use_laser, invisible);
     }
 }
 
 class Bat extends Animal{
     constructor(num_legs, is_warm_blooded, use_laser, invisible){
-        super(num_legs, is_warm_blooded, use_laser, invisible);
+        super(num_legs, is_warm_blooded);
+        this.superpower = new SuperPower(use_laser, invisible);
     }
 }
 
 class Chimpanzee extends Animal{
     constructor(num_legs, is_warm_blooded, use_laser, invisible){
-        super(num_legs, is_warm_blooded, use_laser, invisible);
+        super(num_legs, is_warm_blooded);
+        this.superpower = new SuperPower(use_laser, invisible);
     }
 }
 
 class Fox extends Animal{
     constructor(num_legs, is_warm_blooded, use_laser, invisible){
-        super(num_legs, is_warm_blooded, use_laser, invisible);
+        super(num_legs, is_warm_blooded);
+        this.superpower = new SuperPower(use_laser, invisible);
     }
 }
 
 class Chicken extends Animal{
     constructor(num_legs, is_warm_blooded, use_laser, invisible){
-        super(num_legs, is_warm_blooded, use_laser, invisible);
+        super(num_legs, is_warm_blooded);
+        this.superpower = new SuperPower(use_laser, invisible);
     }
 }
 
 
 //Driver code
+
+let superpower = new SuperPower(true, false);
+
 let animal = new Animal(2, true, true, true);
 console.log(animal);
-console.log(animal.use_laser_vision());
-console.log(animal.be_invisible());
 
 console.log('______________________')
 
 let frog = new Frog(4, false, true, false);
 console.log(frog);
-console.log(frog.use_laser_vision());
-console.log(frog.be_invisible());
+console.log(frog.superpower.use_laser_vision());
+console.log(frog.superpower.be_invisible());
 
 console.log('______________________')
 
 let chimpanzee = new Chimpanzee(2, true, false, true);
 console.log(chimpanzee);
-console.log(chimpanzee.use_laser_vision());
-console.log(chimpanzee.be_invisible());
+console.log(chimpanzee.superpower.use_laser_vision());
+console.log(chimpanzee.superpower.be_invisible());
 
 console.log('______________________')
 
 let chicken = new Chicken(2, false, false, false);
 console.log(chicken);
-console.log(chicken.use_laser_vision());
-console.log(chicken.be_invisible());
+console.log(chicken.superpower.use_laser_vision());
+console.log(chicken.superpower.be_invisible());
