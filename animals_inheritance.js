@@ -14,8 +14,11 @@ class Animal {
 }
 
 class Bat extends Animal{
-    constructor(legs,nocturnal,types,sex,sounds) {
+    constructor(legs,nocturnal,types,sex,sounds,wingsSize,blindStatus) {
         super(legs,nocturnal,types,sex,sounds)
+        this.superPower = new SuperPower()
+        this.wingsSize = wingsSize
+        this.blindStatus=blindStatus
     }
 }
 
@@ -33,12 +36,13 @@ class SuperPower {
     }
 }
 
-let batman = new Bat(2,true,'Omnivore','Female')
+let batman = new Bat(2,true,'Omnivore','Female','Small',true)
 let cowman = new Cow(4,true,'Hebivore','Male','Mooo....')
 
 console.log(batman)
 // console.log(batman.sound);
+batman.superPower.be_Invisible()
 
-console.log(cowman)
+// console.log(cowman)
 // console.log(cowman.sound);
 
