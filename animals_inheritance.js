@@ -15,7 +15,7 @@ class Chimpanze extends Animal {
 
 class Chicken extends Animal {
     constructor() {
-        super()
+        super('Chicken')
     }
 }
 
@@ -23,27 +23,29 @@ class Chicken extends Animal {
 class Frog extends Animal {
     constructor() {
         super('Frog', 4)
+        this.superpower = new SuperPower('Frog')
     }
 }
 
 class Fox extends Animal {
     constructor() {
         super('Fox', 4)
+        this.superpower = new SuperPower('Fox')
     }
 }
 
 // super power
 class SuperPower {
-    constructor() {
-
+    constructor(name) {
+        this.name = name
     }
 
     use_laser_vision() {
-        return `Animal is danger with red eyes`
+        return `${this.name} Animal is danger with red eyes`
     }
 
     be_invisible() {
-        return `This animal is invisble beware`
+        return `${this.name} This animal is invisble beware`
     }
 }
 
@@ -52,6 +54,8 @@ let animal = new Animal()
 let chim = new Chimpanze()
 let frog = new Frog()
 let fox = new Fox()
-console.log(chim)
-console.log(frog)
+
 console.log(fox)
+console.log(frog)
+console.log(fox.superpower.use_laser_vision())
+console.log(frog.superpower.be_invisible())
