@@ -49,18 +49,18 @@ class SuperPower{
 
 }
 
-let binatang1 = new Animal(1, 'cold')
-let binatang2 = new Frog(2, 'cold')
-let binatang3 = new Bat(2, 'cold')
-let binatang4 = new Chimpanzee(4, 'warm')
-let binatang5 = new Fox(4, 'warm')
-let binatang6 = new Chicken(2, 'cold')
+let Peliharaanku = new Animal(1, 'cold')
+let Forgy = new Frog(2, 'cold')
+let Batsi = new Bat(2, 'cold')
+let Chimpzee = new Chimpanzee(4, 'warm')
+let Foxy = new Fox(4, 'warm')
+let Chikenzee = new Chicken(2, 'cold')
 
-console.log(binatang1);
-console.log(binatang2);
-console.log(binatang3);
-console.log(binatang4);
-console.log(binatang5);
-console.log(binatang6);
-console.log("=================");
+console.log(Peliharaanku);
+console.log(Forgy);
+console.log(Batsi);
+console.log(Chimpzee);
+console.log(Foxy);
+console.log(Chikenzee);
+console.log("=================a");
 console.log(binatang5.superPower.use_laser_vision());
