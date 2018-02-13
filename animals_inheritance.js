@@ -4,6 +4,7 @@ class Animal {
 	constructor (num_legs, is_warm_blooded) {
 		this._num_legs = num_legs;
 		this._is_warm_blooded = is_warm_blooded;
+		this.superpower = new SuperPower();
 	}
 }
 
@@ -38,10 +39,6 @@ class Chimpanzee extends Animal {
 class Fox extends Animal {
 	constructor () {
 		super(4, true);
-	}
-
-	get superpower() {
-		return new SuperPower()
 	}
 }
 
