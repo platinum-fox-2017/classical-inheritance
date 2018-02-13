@@ -28,40 +28,49 @@ class Animal{
 class Frog extends Animal{
     constructor(){
         super(4,false);
+        this._superpower = new SuperPower(this.constructor.name);
     }
 
     get superpower(){
-        return new SuperPower(this.constructor.name);
+        return this._superpower;
     }
 }
 
 class Bat extends Animal{
     constructor(){
         super(2,true);
+        this._superpower = new SuperPower(this.constructor.name);
     }
 
     get superpower(){
-        return new SuperPower(this.constructor.name);
+        return this._superpower;
+
     }
 }
 
 class Chimpanzee extends Animal{
     constructor(){
         super(4,true);
+        this._superpower = new SuperPower(this.constructor.name);
+
     }
 
     get superpower(){
-        return new SuperPower(this.constructor.name);
+        return this._superpower;
+
     }
 }
 
 class Fox extends Animal{
     constructor(){
         super(4,true);
+        this._superpower = new SuperPower(this.constructor.name);
+
     }
 
     get superpower(){
-        return new SuperPower(this.constructor.name);
+        return this._superpower;
+
     }
 }
 
@@ -69,10 +78,13 @@ class Fox extends Animal{
 class Chicken extends Animal{
     constructor(){
         super(2,true);
+        this._superpower = new SuperPower(this.constructor.name);
+
     }
 
     get superpower(){
-        return new SuperPower(this.constructor.name);
+        return this._superpower;
+
     }
 }
 
