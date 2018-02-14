@@ -6,15 +6,16 @@ class Animal {
         this.isWarmBlooded = true
         this.class = 'Vertebrates'
         this.phylum = 'Chordata'
+        this._superpower = new SuperPower()
+    }
+    get superpower(){
+        return this._superpower
     }
 }
 
 class Fox extends Animal {
     constructor(){
         super()
-    }
-    get superpower(){
-        return new SuperPower()
     }
 }
 
@@ -24,9 +25,6 @@ class Komodo extends Animal {
         // overriding
         this.isWarmBlooded = false
     }
-    get superpower(){
-        return new SuperPower()
-    }
 }
 
 class Shark extends Animal {
@@ -34,9 +32,6 @@ class Shark extends Animal {
         super()
         this.isWarmBlooded = false
         this.numLegs = 0
-    }
-    get superpower(){
-        return new SuperPower()
     }
 }
 
@@ -47,9 +42,6 @@ class Starfish extends Animal {
         this.numLegs = 0
         this.class = 'Invertebrates'
         this.phylum = 'Echinodermata'
-    }
-    get superpower(){
-        return new SuperPower()
     }
 }
 
